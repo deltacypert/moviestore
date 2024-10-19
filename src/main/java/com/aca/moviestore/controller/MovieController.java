@@ -40,4 +40,11 @@ public class MovieController {
     public List<Movie> getMoviesById(@PathVariable Integer movieIdValue) {
         return service.getMoviesById(movieIdValue);
     }
+
+    @RequestMapping(
+            value = "/title/{titleValue}",
+            method = RequestMethod.GET)
+    public List<Movie> getMoviesByTitle(@PathVariable String titleValue) {
+        return service.getMoviesByTitle(titleValue);
+    }
 }

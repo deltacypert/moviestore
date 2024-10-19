@@ -3,11 +3,10 @@ package com.aca.moviestore.dao;
 import com.aca.moviestore.model.Genre;
 import com.aca.moviestore.model.Movie;
 
-import java.nio.IntBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MovieDaoMock implements MovieDAO {
+public class MovieDaoMock implements MovieDao {
 
     private static List<Movie> movies = new ArrayList<>();
 
@@ -83,6 +82,17 @@ public class MovieDaoMock implements MovieDAO {
         List<Movie> myMovies = new ArrayList<>();
         for (Movie movie : movies) {
             if (movie.getId().equals(movieIdValue)) {
+                myMovies.add(movie);
+            }
+        }
+        return myMovies;
+    }
+
+    @Override
+    public List<Movie> getMoviesByTitle(String title) {
+        List<Movie> myMovies = new ArrayList<>();
+        for (Movie movie : movies) {
+            if (movie.getTitle().toLowerCase().contains(title.toLowerCase())) {
                 myMovies.add(movie);
             }
         }
