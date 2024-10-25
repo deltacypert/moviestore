@@ -37,4 +37,12 @@ public class Movie {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "title: " + getTitle() +
+                ", releaseYear: " + getReleaseYear() +
+                ", genre: " + getGenre() +
+                ", id: " + getId();
+    }
 }

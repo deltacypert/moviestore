@@ -2,11 +2,9 @@ package com.aca.moviestore.controller;
 
 import com.aca.moviestore.model.Genre;
 import com.aca.moviestore.model.Movie;
+import com.aca.moviestore.model.MovieException;
 import com.aca.moviestore.service.MovieService;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,7 +28,7 @@ public class MovieController {
     @RequestMapping(
             value = "/releaseyear/{releaseYearValue}",
             method = RequestMethod.GET)
-    public List<Movie> getMoviesByReleaseYear(@PathVariable Integer releaseYearValue) {
+    public List<Movie> getMoviesByReleaseYear(@PathVariable Integer releaseYearValue) throws MovieException {
         return service.getMoviesByReleaseYear(releaseYearValue);
     }
 
@@ -47,4 +45,35 @@ public class MovieController {
     public List<Movie> getMoviesByTitle(@PathVariable String titleValue) {
         return service.getMoviesByTitle(titleValue);
     }
+
+    @RequestMapping(
+            consumes = "application/json",
+            method = RequestMethod.POST)
+    public Movie createMovie(@RequestBody Movie newMovie) throws MovieException {
+        return service.createMovie(newMovie);
+    }
+
+    @RequestMapping(
+            consumes = "application/json",
+            method = RequestMethod.PUT)
+    public Movie updateMovie(@RequestBody Movie updateMovie) {
+        return service.updateMovie(updateMovie);
+    }
+
+    @RequestMapping(
+            value = "/{movieIdValue}",
+            method = RequestMethod.DELETE)
+    public Movie deleteMovieById(@PathVariable Integer movieIdValue) {
+        System.out.println("movie: " + movieIdValue + " deleted.");
+        return service.deleteMovieById(movieIdValue);
+    }
+
+    @RequestMapping(
+            value = "/report",
+            method = RequestMethod.GET)
+    public List<Movie> getReport(@RequestParam Integer startReleaseYear,
+                                 @RequestParam Integer endReleaseYear) throws MovieException {
+        return service.getReport(startReleaseYear, endReleaseYear);
+    }
+
 }
