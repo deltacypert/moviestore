@@ -1,10 +1,14 @@
 package com.aca.moviestore.model;
 
+import java.time.LocalDateTime;
+
 public class Movie {
     private Integer id;
     private String title;
     private Integer releaseYear;
     private Genre genre;
+    private LocalDateTime createDateTime;
+    private LocalDateTime updateDateTime;
 
     public String getTitle() {
         return title;
@@ -37,6 +41,14 @@ public class Movie {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    public LocalDateTime getUpdateDateTime() { return updateDateTime; }
+
+    public void setUpdateDateTime(LocalDateTime updateDateTime) { this.updateDateTime = updateDateTime; }
+
+    public LocalDateTime getCreateDateTime() { return createDateTime; }
+
+    public void setCreateDateTime(LocalDateTime createDateTime) { this.createDateTime = createDateTime; }
 
     @Override
     public String toString() {

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc188b04-8c08-457e-885e-c21033c37094" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/dao/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/dao/MovieDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/dao/MovieDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/dao/MovieDaoMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/model/Genre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aca/moviestore/service/MovieService.java" afterDir="false" />
     </list>
@@ -46,12 +47,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.MariaDbUtil.executor": "Run",
     "Application.MoviestoreApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Dylan/dev/workspace/arca/moviestore/backend",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+    "last_opened_file_path": "C:/Users/dcype/rightlydivide",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RunManager">

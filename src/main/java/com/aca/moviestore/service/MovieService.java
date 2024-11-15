@@ -1,7 +1,7 @@
 package com.aca.moviestore.service;
 
 import com.aca.moviestore.dao.MovieDao;
-import com.aca.moviestore.dao.MovieDaoMock;
+import com.aca.moviestore.dao.MovieDaoImpl;
 import com.aca.moviestore.model.Genre;
 import com.aca.moviestore.model.Movie;
 import com.aca.moviestore.model.MovieException;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MovieService {
 
-    private MovieDao movieDao = new MovieDaoMock();
+    private MovieDao movieDao = new MovieDaoImpl();
 
     public List<Movie> getMovies() {
         return movieDao.getMovies();

@@ -33,7 +33,7 @@ public class MovieController {
     }
 
     @RequestMapping(
-            value = "/{movieIdValue}",
+            value = "/id/{movieIdValue}",
             method = RequestMethod.GET)
     public List<Movie> getMoviesById(@PathVariable Integer movieIdValue) {
         return service.getMoviesById(movieIdValue);
@@ -61,7 +61,7 @@ public class MovieController {
     }
 
     @RequestMapping(
-            value = "/{movieIdValue}",
+            value = "/id/{movieIdValue}",
             method = RequestMethod.DELETE)
     public Movie deleteMovieById(@PathVariable Integer movieIdValue) {
         System.out.println("movie: " + movieIdValue + " deleted.");
